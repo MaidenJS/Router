@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world)
-
-#  WiseProject #
+#  WiseProject # [![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world)
 WiseProject description here...
 
 ## Installation & Build Guide ##
@@ -29,7 +27,7 @@ WiseProject description here...
 <?php
     return [
         'DB_HOST' => 'localhost',
-        'DB_NAME' => 'mew',
+        'DB_NAME' => 'wiseproject',
         'DB_USERNAME' => 'root',
         'DB_PASSWORD' => 'root'
     ];
