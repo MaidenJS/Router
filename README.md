@@ -1,12 +1,12 @@
-#  WiseProject # [![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world)
-WiseProject description here...
+# WiseProject [![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world) #
+Wiseproject provides a platform for companies to find vendors for sourcing contracts.
 
 ## Installation & Build Guide ##
 
 ### Miscellaneous ###
 - API docs: https://speca.io/yichenzhu1337/wiseproject-api/
 - IP: XXX
-- URL: XXX
+- URL: www.wiseproject.ca
 
 ### Backend Setup and Update ###
 1. Install Laravel: "composer install"
@@ -40,6 +40,10 @@ WiseProject description here...
 
 ### Running Gulp ###
 1. "gulp watch"
+
+### Running Grunt ###
+1. "cd public"
+2. "grunt serve"
 
 ### Testing with PHPUnit ###
 1. Windows Aliasing: (at)DOSKEY phpunit=vendor\bin\phpunit
