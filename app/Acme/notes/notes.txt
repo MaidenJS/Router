@@ -159,3 +159,26 @@ budget
 start_time
 end_time
 created_at
+
+============================================
+TLDR; MVP
+==========
+backend
+---------------
+authentication
+companies CRUD
+contracts CRUD
+search for companies and contracts
+
+frontend
+---------------
+public
+landing
+companies
+contracts
+login
+register page -> create your own company
+
+authorized
+account settings
+create a contract

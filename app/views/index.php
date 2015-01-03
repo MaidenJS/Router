@@ -19,18 +19,10 @@
 
         <div class="container">
 
-            <header>
-                <nav class="navbar navbar-default">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#/customers">Customers</a></li>
-                        <li><a href="#/orders">Orders</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <div ng-view class="slide-animation"> my SPA </div>
 
-            <div ng-view class="slide-animation"></div>
-
-            <footer> the footer here </footer>
+            <div> <?php echo Session::token(); ?> </div>
+            <div> <?php echo csrf_token(); ?> </div>
 
         </div>
 
