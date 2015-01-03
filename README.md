@@ -54,8 +54,3 @@ Wiseproject provides a platform for companies to find vendors for sourcing contr
 1. Windows Aliasing: (at)DOSKEY cc=vendor\bin\codecept
 2. Linux Aliasing: alias cc=vendor\bin\codecept
 3. "cc run [suite]"
-
-### API Documentation ###
-1. view at: "localhost:8000/api-docs"
-2. find routes.php: \vendor\jlapp\swaggervel\src\Jlapp\Swaggervel\routes.php
-3. on line 54 delete: {$excludes}
