@@ -3,9 +3,9 @@ php artisan commander:generate Acme/Bar/SubscribeUserCommand --properties="first
 dotfiles - create generic bashfiles for linux AND windows
 PHPSTORM - import the dam settings
 DEBUG - phpstorm xdebug waiting for incoming connection with ide key
-VAGRANT - multiple VMS or mulitple projects in 1 VM
-BOWER.io - this is pretty darn insanely cool - laracasts
-GRUNT - liveload
+VAGRANT - multiple VMS or multiple projects in 1 VM
+BOWERY.io - this is pretty darn insanely cool - laracasts
+GRUNT - livereload
 VIM - learn how to use
 install LINUX
 Package development - my first LARAVEL package
@@ -45,5 +45,116 @@ Event::listen('Acme\Modules\User\Commands\Register\Events\UserHasRegistered', fu
 
 //Event::listen('Acme.*', 'Acme.Modules.User.Commands.Register.Events.EmailNotifier@handle');
 
-
 speca.io
+
+wiseproject meeting 12/31/14
+===============================
+1.
+- verified vs unverified
+- multiple users per compnay account
+- create a company, join a company, what if I don't join a company
+- account hasone->user & belongsto/hasone/createone-> company
+- company categories (list of things db, web design, etc.....)
+
+2.
+- gmail
+- chating system between 2 companies only,
+- 5 people from company x converse with 3 people from company y
+
+3.
+- notification
+-
+
+4.
+- proposal system
+- exactly like a private message
+- limited number of proposal per month, day, etc....
+- buyer pov
+    - C
+    - R
+    - U
+    - D
+- seller pov
+    - C submit proposal
+    - R contract / all contracts and select one previously sent
+    - U 
+    - D ignore
+
+5.
+- dashboard
+- sell all notifications
+    - messages
+    - contracts
+    - etc...
+- proposals
+- contracts (CRUD)
+- account settings 
+    - CRUD for the entire company, profile, settings, users
+    - support ticket for changing company names
+- following a company *
+
+6.
+- edit active contract
+- version control the active contracts
+
+7.
+- community forum
+
+8.
+- rating system on EACH company
+
+9.
+- post a contract
+- contracts can be bid on
+- notifications to companies
+
+10
+- search for contract selling and search sellers
+
+public companies
+public contracts - newspaper and dialer
+
+MVP
+authentication
+companies CRUD
+contracts CRUD
+search for companies and contracts
+
+wordpress
+bootstrap and php
+web hosting - http://www.webhostinghub.com/
+
+Saturday meeting
+-----------------
+all wireframes are in cedric's repository
+show ethan/everyone about setup
+use github to do workflow / waffle.io
+ethan focus on javascript
+learn angular
+do frontend
+go over features again
+host - give me
+
+DB specs
+-----------------
+Company
+id
+name
+email
+address
+phone
+postal_code
+country
+photo_path
+price
+
+Contract
+id
+company_id
+name
+description
+view_count
+budget
+start_time
+end_time
+created_at
