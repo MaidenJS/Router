@@ -129,6 +129,7 @@ Saturday meeting
 all wireframes are in cedric's repository
 show ethan/everyone about setup
 use github to do workflow / waffle.io
+use trello?
 ethan focus on javascript
 learn angular
 do frontend
