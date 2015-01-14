@@ -1,15 +1,23 @@
 (function() {
 
+    'use strict';
+
     var ProfileFactory = function($http) {
 
         return {
-            get : function() {
+
+            getAll : function()
+            {
                 return $http.get('/api/v1/profiles');
             },
-            show : function(id) {
+
+            getById : function(id)
+            {
                 return $http.get('/api/v1/profiles' + id);
             },
-            save : function(commentData) {
+
+            create : function(commentData)
+            {
                 return $http({
                     method: 'POST',
                     url: 'api/comments',
@@ -17,15 +25,19 @@
                     data: $.param(commentData)
                 });
             },
-            destroy : function(id) {
+
+            delete : function(id)
+            {
                 return $http.delete('/api/v1/profiles' + id);
             }
+
         }
     };
 
     ProfileFactory.$inject = ['$http'];
 
-    angular.module('MewApp', [])
+    angular
+        .module('WiseprojectApp', [])
         .factory('ProfileFactory', ProfileFactory);
 
 }());

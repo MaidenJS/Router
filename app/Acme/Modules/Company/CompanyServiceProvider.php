@@ -1,8 +1,8 @@
-<?php namespace Acme;
+<?php namespace Acme\Modules\Company;
 
 use Illuminate\Support\ServiceProvider;
 
-class JobPostServiceProvider extends ServiceProvider {
+class CompanyServiceProvider extends ServiceProvider {
 
     /**
      * Registers and Binds all the relevant interfaces in the IOC container;
@@ -12,8 +12,8 @@ class JobPostServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->app->bind(
-            'Acme\Modules\JobPost\Repositories\JobPostRepositoryInterface',
-            'Acme\Modules\JobPost\Repositories\EloquentJobPostRepository'
+            'Acme\Modules\Company\Repositories\CompanyRepositoryInterface',
+            'Acme\Modules\Company\Repositories\EloquentCompanyRepository'
         );
     }
 }

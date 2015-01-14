@@ -1,8 +1,11 @@
 (function() {
 
-    angular.module('MewApp').value('appSettings', {
-        title: 'My Esports World Application',
-        version: '1.0'
+    'use strict';
+
+    angular.module('WiseprojectApp').value('appSettings', {
+        title: 'Wiseproject Application',
+        version: '1.0',
+        appName: 'WiseprojectApp'
     });
 
 }());

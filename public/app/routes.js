@@ -1,13 +1,17 @@
 (function() {
 
-    "use strict";
+    'use strict';
 
     var app = angular.module('MewApp', [
         'ngRoute',
-        'ngAnimate'
+        'ngAnimate',
+        'restangular'
     ]);
 
-    app.config(function ($routeProvider) {
+    app.config(function ($routeProvider, RestangularProvider) {
+
+        RestangularProvider.setBaseUrl('/api/v1');
+
         $routeProvider
             .when('/profiles',
             {

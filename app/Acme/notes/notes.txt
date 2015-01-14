@@ -131,7 +131,7 @@ show ethan/everyone about setup
 use github to do workflow / waffle.io
 use trello?
 ethan focus on javascript
-learn angular
+learn angular - https://www.youtube.com/watch?v=6Lde4LilB-M -> 12.25
 do frontend
 go over features again
 host - give me
@@ -159,3 +159,26 @@ budget
 start_time
 end_time
 created_at
+
+Restangular -> https://github.com/mgonto/restangular
+
+
+
+// Restangular returns promises
+Restangular.all('users').getList()  // GET: /users
+.then(function(users) {
+  // returns a list of users
+  $scope.user = users[0]; // first Restangular obj in list: { id: 123 }
+})
+
+// Later in the code...
+
+// Restangular objects are self-aware and know how to make their own RESTful requests
+$scope.user.getList('cars');  // GET: /users/123/cars
+
+// You can also use your own custom methods on Restangular objects
+$scope.user.sendMessage();  // POST: /users/123/sendMessage
+
+// Chain methods together to easily build complex requests
+$scope.user.one('messages', 123).one('from', 123).getList('unread');
+// GET: /user/123/messages/123/from/123/unread

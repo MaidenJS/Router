@@ -122,9 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
-        'Jlapp\Swaggervel\SwaggervelServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
-        'Acme\BackendServiceProvider'
 
 	),
 
