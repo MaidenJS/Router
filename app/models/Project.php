@@ -1,6 +1,6 @@
 <?php
 
-class JobPost extends \Eloquent {
+class Project extends \Eloquent {
 
 	protected $table = 'job_posts';
 
@@ -11,8 +11,12 @@ class JobPost extends \Eloquent {
 		'view_count',
 		'budget',
 		'start_time',
-		'end_time',
-		'created_at'
+		'end_time'
 	];
+
+	public function company()
+	{
+		return $this->belongsTo('Company');
+	}
 
 }
