@@ -1,24 +1,19 @@
 # WiseProject [![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world) #
 Wiseproject provides a platform for companies to find vendors for sourcing contracts.
 
-## Installation & Build Guide ##
+## Repository Information & Guide ##
 
-### Miscellaneous ###
+### API Documentation ###
 - API docs: https://speca.io/yichenzhu1337/wiseproject-api/
-- IP: XXX
-- URL: www.wiseproject.ca
 
-### Backend Setup and Update ###
-1. Install Laravel: "composer install"
-2. update Laravel: "composer update"
-3. Migrate your database: "php artisan migrate"
-4. Seed your database: "php artisan db:seed"
-5. Autoload All files: "composer dump-autoload -o"
-
-### Frontend Setup and Update ###
-1. Install node_modules: "npm install" in root folder
-2. Install bower_components: "cd public", "bower install", "bower list"
-3. Update bower_components: "cd public", "bower update", "bower list"
+### Server Details ###
+- Domain Name: http://www.wiseproject.ca/
+- IP Address: 104.131.109.224
+- Username: forge
+- Sudo Password:Lls5dDmKEB4e2QMyfFtw
+- Database Name: payquad
+- Database Username: forge
+- Database Password: BsXV7wujx42HdruJTNIA
 
 ### Database Configuration ###
 1. create a file called ".env.php"
@@ -33,17 +28,27 @@ Wiseproject provides a platform for companies to find vendors for sourcing contr
     ];
 ```
 
+### Backend Setup and Update ###
+1. Install Laravel: "composer install"
+2. update Laravel: "composer update"
+3. Migrate your database: "php artisan migrate"
+4. Seed your database: "php artisan db:seed"
+5. Autoload All files: "composer dump-autoload -o"
+
+### Frontend Setup and Update ###
+1. Install node_modules: "npm install" in root folder
+2. Install bower_components: "cd public", "bower install", "bower list"
+3. Update bower_components: "cd public", "bower update", "bower list"
+
+### Running Gulp ###
+1. "gulp build --dev" or gulp build --prod"
+2. "gulp watch --dev"
+
 ### Running the application ###
 1. type "php artisan serve" on the command line to start the server
 2. host is at: "localhost:8000"
-3. access api via the prefix: "localhost:8000/api/v1/*route-name*"
-
-### Running Gulp ###
-1. "gulp watch"
-
-### Running Grunt ###
-1. "cd public"
-2. "grunt serve"
+3. run gulp and watcher: "gulp watch --dev"
+4. access api via the prefix: "localhost:8000/api/v1/*route-name*"
 
 ### Testing with PHPUnit ###
 1. Windows Aliasing: (at)DOSKEY phpunit=vendor\bin\phpunit
