@@ -8,4 +8,6 @@ interface UserRepositoryInterface {
 
     public function logout();
 
+    public function getAuthUser();
+
 } 

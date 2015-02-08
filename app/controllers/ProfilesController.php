@@ -2,7 +2,7 @@
 
 use Acme\Modules\Profile\Repositories\ProfileRepositoryInterface;
 
-class ProfilesController extends \BaseController {
+class ProfilesController extends ApiController {
 
     /**
      * @var ProfileRepositoryInterface

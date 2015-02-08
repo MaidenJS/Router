@@ -1,6 +1,21 @@
 <?php
 
+use Acme\Modules\Company\Repositories\CompanyRepositoryInterface;
+
 class CompaniesController extends ApiController {
+
+	/**
+	 * @var CompanyRepositoryInterface
+	 */
+	protected $companyRepository;
+
+	/**
+	 * @param CompanyRepositoryInterface $companyRepository
+	 */
+	function __construct(CompanyRepositoryInterface $companyRepository)
+	{
+		$this->companyRepository = $companyRepository;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -10,29 +25,9 @@ class CompaniesController extends ApiController {
 	 */
 	public function index()
 	{
-		//
-	}
+		$companies = $this->companyRepository->getAll();
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /companies/create
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /companies
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
+		return $this->responseSuccess($companies);
 	}
 
 	/**
@@ -44,19 +39,24 @@ class CompaniesController extends ApiController {
 	 */
 	public function show($id)
 	{
-		//
+		$company = $this->companyRepository->getById($id);
+
+		return $this->responseSuccess($company);
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
-	 * GET /companies/{id}/edit
+	 * Store a newly created resource in storage.
+	 * POST /companies
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function store()
 	{
-		//
+		$input = [];
+
+		$company = $this->companyRepository->create($input);
+
+		return $this->responseSuccess($company);
 	}
 
 	/**
@@ -68,7 +68,9 @@ class CompaniesController extends ApiController {
 	 */
 	public function update($id)
 	{
-		//
+		$company = $this->companyRepository->update($id, []);
+
+		return $this->responseSuccess($company);
 	}
 
 	/**
@@ -80,7 +82,9 @@ class CompaniesController extends ApiController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$company = $this->companyRepository->delete($id);
+
+		return $this->responseSuccess($company);
 	}
 
 }

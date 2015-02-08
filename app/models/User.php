@@ -15,7 +15,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     /**
      * @var array
      */
-    protected $fillable = ['email', 'password'];
+    protected $fillable = [
+		'email',
+		'password'
+	];
+
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -23,6 +27,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = ['password'];
+
+	/**
+	 * Passwords will automatically be hashed when creating a user.
+	 *
+	 * @param $password
+	 */
+	public function setPasswordAttribute($password)
+	{
+		$this->attributes['password'] = Hash::make($password);
+	}
 
 	/**
 	 * Get the unique identifier for the user.

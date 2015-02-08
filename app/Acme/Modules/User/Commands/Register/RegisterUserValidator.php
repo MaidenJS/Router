@@ -6,15 +6,19 @@ class RegisterUserValidator {
 
     protected $registrationValidation;
 
-    function __construct(RegisterUserValidation $registrationValidation)
+    function __construct(RegisterUserValidation $registerUserValidation)
     {
-        $this->registrationValidation = $registrationValidation;
+        $this->registerUserValidation = $registerUserValidation;
     }
 
     public function validate($command)
     {
-        var_dump('validate');
-        //$this->registrationValidation->validate($credentials);
+        $credentials = [
+            'email' => $command->email,
+            'password' => $command->password
+        ];
+
+        $this->registerUserValidation->validate($credentials);
     }
 
 } 

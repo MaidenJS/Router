@@ -2,7 +2,7 @@
 
 class Project extends \Eloquent {
 
-	protected $table = 'job_posts';
+	protected $table = 'projects';
 
 	protected $fillable = [
 		'company_id',

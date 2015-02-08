@@ -1,0 +1,13 @@
+Project
+----------------
+GET /projects
+
+GET /projects/{id}
+
+POST /projects
+
+PUT /projects/{id}
+
+DELETE /projects/{id}
+
+

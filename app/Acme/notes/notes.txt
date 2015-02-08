@@ -111,74 +111,36 @@ wiseproject meeting 12/31/14
 10
 - search for contract selling and search sellers
 
-public companies
-public contracts - newspaper and dialer
-
-MVP
-authentication
-companies CRUD
-contracts CRUD
 search for companies and contracts
-
-wordpress
-bootstrap and php
 web hosting - http://www.webhostinghub.com/
-
-Saturday meeting
------------------
-all wireframes are in cedric's repository
-show ethan/everyone about setup
-use github to do workflow / waffle.io
-use trello?
-ethan focus on javascript
-learn angular - https://www.youtube.com/watch?v=6Lde4LilB-M -> 12.25
-do frontend
-go over features again
-host - give me
-
-DB specs
------------------
-Company
-id
-name
-email
-address
-phone
-postal_code
-country
-photo_path
-price
-
-Contract
-id
-company_id
-name
-description
-view_count
-budget
-start_time
-end_time
-created_at
+host - give me domain
 
 ============================================
-TLDR; MVP
-==========
-backend
+Todos - 11
 ---------------
-authentication
-companies CRUD
-contracts CRUD
-search for companies and contracts
-
-frontend
----------------
-public
-landing
-companies
-contracts
 login
 register page -> create your own company
-
-authorized
+landing page
+companies
+- C
+- R
+- U
+- D
+contracts
+- C
+- R
+- U
+- D
+tags
+search for companies and contracts
 account settings
-create a contract
+dashboard
+messages???
+
+Others
+----------
+csrf
+tags
+1 web
+2 mobile
+3 desktop

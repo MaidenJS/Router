@@ -2,12 +2,9 @@
 
 use Acme\Modules\User\Repositories\UserRepositoryInterface;
 use Laracasts\Commander\CommandHandler;
-use Laracasts\Commander\Events\DispatchableTrait;
+// use Laracasts\Commander\Events\DispatchableTrait;
 
 class RegisterUserCommandHandler implements CommandHandler{
-
-    // use FireEventsTrait;
-    // use DispatchableTrait;
 
     /**
      * @var UserRepositoryInterface
@@ -28,9 +25,6 @@ class RegisterUserCommandHandler implements CommandHandler{
      */
     public function handle($command)
     {
-        // fire events BEFORE the actual command occurs
-        //$this->fireBeforeEvents([]);
-
         // manipulate the input
         $input = [
             'email' => $command->email,
@@ -38,15 +32,14 @@ class RegisterUserCommandHandler implements CommandHandler{
         ];
 
         // store it in the database
-        //$user = $this->userRepository->register($input);
-
-        // sends an email to the user
-        var_dump('handle the actual action');
+        $user = $this->userRepository->register($input);
 
         // fire the events that should occur after
-        //$this->fireAfterEvents([]);
+        // sends an email to the user
+        // Event::fire('myEvent'); //var_dump('sends an email top the user');
 
-        //return $user;
+        // returns the response object
+        return $user;
     }
 
 }

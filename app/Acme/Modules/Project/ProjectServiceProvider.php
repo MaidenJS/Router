@@ -1,4 +1,4 @@
-<?php namespace Acme;
+<?php namespace Acme\Modules\Project;
 
 use Illuminate\Support\ServiceProvider;
 

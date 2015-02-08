@@ -1,6 +1,8 @@
-<?php
+<?php namespace api;
 
-class UserRoutesTest extends TestCase {
+use EliteTestingFramework\tests\EliteTestingFramework;
+
+class UserRoutesTest extends EliteTestingFramework {
 
     /**
      * A basic functional test example.
@@ -28,6 +30,16 @@ class UserRoutesTest extends TestCase {
      * @return void
      */
     public function testLogout()
+    {
+
+    }
+
+    /**
+     * A basic functional test example.
+     *
+     * @return void
+     */
+    public function testGetAuthenticatedUserInfor()
     {
 
     }

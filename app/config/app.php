@@ -121,6 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Acme\Modules\User\UserServiceProvider',
+		'Acme\Modules\Company\CompanyServiceProvider',
+		'Acme\Modules\Project\ProjectServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
 

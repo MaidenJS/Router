@@ -10,6 +10,6 @@ interface CompanyRepositoryInterface {
 
     public function update($id, $input);
 
-    public function destroy($id);
+    public function delete($id);
 
 }

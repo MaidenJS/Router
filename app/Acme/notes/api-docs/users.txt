@@ -1,8 +1,11 @@
+User
+----------------
 /users/register
 
 /users/login
 
 /users/logout
 
+/users/get-auth
 
 

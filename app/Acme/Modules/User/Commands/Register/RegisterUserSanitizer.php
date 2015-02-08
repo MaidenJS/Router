@@ -12,6 +12,6 @@ class RegisterUserSanitizer implements CommandBus {
      */
     public function execute($command)
     {
-        var_dump('sanitize');
+
     }
 }

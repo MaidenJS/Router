@@ -1,30 +1,45 @@
 <?php namespace Acme\Modules\Company\Repositories;
 
+use Company;
+
 class EloquentCompanyRepository implements CompanyRepositoryInterface {
+
+    /**
+     * @var Company
+     */
+    private $companyModel;
+
+    /**
+     * @param Company $companyModel
+     */
+    function __construct(Company $companyModel)
+    {
+        $this->companyModel = $companyModel;
+    }
 
     public function getAll()
     {
-        // TODO: Implement getAll() method.
+        return $this->companyModel->all();
     }
 
     public function getById($id)
     {
-        // TODO: Implement getById() method.
+        return $this->companyModel->find($id);
     }
 
     public function create($input)
     {
-        // TODO: Implement create() method.
+        return $this->companyModel->create($input);
     }
 
     public function update($id, $input)
     {
-        // TODO: Implement update() method.
+        return $this->companyModel->find($id)->update($input);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        // TODO: Implement destroy() method.
+        return $this->companyModel->delete($id);
     }
 
 }

@@ -1,6 +1,6 @@
 <?php namespace Acme\Modules\Company\Repositories;
 
-interface CompanyRepositoryInterface {
+interface ProjectRepositoryInterface {
 
     public function getAll();
 
@@ -10,6 +10,6 @@ interface CompanyRepositoryInterface {
 
     public function update($id, $input);
 
-    public function destroy($id);
+    public function delete($id);
 
 }

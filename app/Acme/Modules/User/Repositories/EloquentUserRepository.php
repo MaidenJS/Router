@@ -4,9 +4,6 @@ use User, Auth;
 
 class EloquentUserRepository implements UserRepositoryInterface {
 
-    /**
-     * @var User
-     */
     private $userModel;
 
     /**
@@ -32,7 +29,7 @@ class EloquentUserRepository implements UserRepositoryInterface {
      */
     public function register(array $input)
     {
-        $this->userModel->create($input);
+        return $this->userModel->create($input);
     }
 
     /**
@@ -41,7 +38,7 @@ class EloquentUserRepository implements UserRepositoryInterface {
      */
     public function login(array $credentials)
     {
-        return $this->authModel->attempt($credentials);
+        return Auth::attempt($credentials);
     }
 
     /**
@@ -49,7 +46,15 @@ class EloquentUserRepository implements UserRepositoryInterface {
      */
     public function logout()
     {
-        return $this->authModel->logout();
+        return Auth::logout();
+    }
+
+    /**
+     * @var User
+     */
+    public function getAuthUser()
+    {
+        return Auth::user();
     }
 
 }

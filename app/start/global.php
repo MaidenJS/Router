@@ -59,6 +59,8 @@ App::error(function(Exception $exception, $code)
 App::error(function(ValidationException $exception, $code)
 {
     $errorResponse = [
+        'success' => false,
+        'code' => 1337,
         'message' => $exception->getMessage(),
         'errors' => $exception->getErrors()
     ];
@@ -69,7 +71,10 @@ App::error(function(ValidationException $exception, $code)
 App::missing(function($exception)
 {
     $errorResponse = [
-        'message' => 'Endpoint does not exist'
+        'success' => false,
+        'code' => 1337,
+        'message' => 'Endpoint does not exist',
+        'errors' => []
     ];
 
     return Response::json($errorResponse);

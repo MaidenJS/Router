@@ -8,7 +8,7 @@ class ProfilesTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(range(1, 100) as $index)
+		foreach(range(1, 50) as $index)
 		{
 			Profile::create([
                 'user_id' => $index,

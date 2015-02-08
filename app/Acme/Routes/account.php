@@ -1,2 +1,3 @@
 <?php
-Route::resource('/account-settings', 'AccountSettingsController');
+
+Route::resource('/account', 'AccountsController');

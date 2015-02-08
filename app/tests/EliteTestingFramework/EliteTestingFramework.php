@@ -1,12 +1,13 @@
-<?php namespace tests;
+<?php namespace EliteTestingFramework\tests;
 
 /**
  * Laravel specific testing framework for functional/db tests
+ *
  * Dependencies:
  *	- Laravel 4.*
  *	- Mockery 0.9.*
  */
-class EliteTestingFramework extends TestCase implements EliteTestingFrameworkInterface {
+class EliteTestingFramework extends TestCase implements TestingFrameworkInterface {
 
 	/**
 	 * Used specifically by Mockery library
@@ -17,10 +18,14 @@ class EliteTestingFramework extends TestCase implements EliteTestingFrameworkInt
 	}
 
 	/**
-	 * Used specifically by Mockery library
+	 * Main Testing tool for API Acceptance testing
 	 *
-	 * @param $method
-	 * @param $route
+	 * Example:
+	 * - $this->apiCall('GET', 'api/v1/companies/1');
+	 * - $this->apiCall('POST', 'api/v1/companies', ['name' => 'myawesomecompanyname']);
+	 *
+	 * @param string $method
+	 * @param string $route
 	 * @param array $input
 	 */
 	public function apiCall($method, $route, array $input = [])
@@ -41,7 +46,6 @@ class EliteTestingFramework extends TestCase implements EliteTestingFrameworkInt
 	 */
 	public function seeInDb($table, array $fields = [])
 	{
-
 		/*
 		Example call:
 		$this->seeInDb('users', [

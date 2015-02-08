@@ -1,30 +1,37 @@
 <?php namespace Acme\Modules\Company\Repositories;
 
-class EloquentCompanyRepository implements CompanyRepositoryInterface {
+class EloquentProjectRepository implements ProjectRepositoryInterface {
+
+    private $projectModel;
+
+    function __construct(Project $projectModel)
+    {
+        $this->projectModel = $projectModel;
+    }
 
     public function getAll()
     {
-        // TODO: Implement getAll() method.
+        return $this->projectModel->all();
     }
 
     public function getById($id)
     {
-        // TODO: Implement getById() method.
+        return $this->projectModel->find($id);
     }
 
     public function create($input)
     {
-        // TODO: Implement create() method.
+        return $this->projectModel->create($input);
     }
 
     public function update($id, $input)
     {
-        // TODO: Implement update() method.
+        return $this->projectModel->find($id)->update($input);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        // TODO: Implement destroy() method.
+        return $this->projectModel->destroy($id);
     }
 
 }

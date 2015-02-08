@@ -1,6 +1,6 @@
 <?php
 
-class RemindersController extends Controller {
+class RemindersController extends ApiController {
 
 	/**
 	 * Display the password reminder view.
