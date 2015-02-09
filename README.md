@@ -10,10 +10,10 @@ Wiseproject provides a platform for companies to find vendors for sourcing contr
 - Domain Name: http://www.wiseproject.ca/
 - IP Address: 104.131.109.224
 - Username: forge
-- Sudo Password:Lls5dDmKEB4e2QMyfFtw
-- Database Name: payquad
+- Sudo Password: 2mm6ZVfJWpsfInNd2L27
+- Database Name: forge
 - Database Username: forge
-- Database Password: BsXV7wujx42HdruJTNIA
+- Database Password: OWuIFrEalK0jGAJ0wE5F
 
 ### Database Configuration ###
 1. create a file called ".env.php"
