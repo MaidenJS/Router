@@ -4,9 +4,13 @@
 
     angular
         .module('app', [
+            // wiseproject(wp) sub modules/dependencies
+            'wp.company',
+
+            // external dependencies
             'ui.router',
             'restangular',
-            'angularUtils.directives.dirPagination'
+            'ngAnimate'
         ]);
 
 })();

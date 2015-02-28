@@ -1,24 +1,46 @@
-<div class="col-sm-2 paddingTop20">
-side bar
-</div>
+<form>
 
-<div class="col-md-10 blogShort">
-    <h1>Title 1</h1>
+    <div class="form-group">
+        <label for="name"> Company Name </label>
+        <input ng-model="vm.company.name" class="form-control" id="name" placeholder="Alex Jefferson">
+    </div>
 
-    <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+    <div class="form-group">
+        <label for="email"> Email </label>
+        <input ng-model="vm.company.email" class="form-control" id="email" placeholder="john@example.com">
+    </div>
 
-    <em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>
+    <div class="form-group">
+        <label for="address"> Address </label>
+        <input ng-model="vm.company.address" class="form-control" id="address" placeholder="Password">
+    </div>
 
-    <article>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-            Lorem Ipsum.
-        </p>
-    </article>
+    <div class="form-group">
+        <label for="phone"> Phone </label>
+        <input ng-model="vm.company.phone" class="form-control" id="phone" placeholder="Password">
+    </div>
 
-    <a class="btn btn-blog pull-right marginBottom10" href="http://bootsnipp.com/user/snippets/2RoQ"> READ MORE </a>
+    <div class="form-group">
+        <label for="postal_code"> Postal Code </label>
+        <input ng-model="vm.company.postal_code" class="form-control" id="postal_code" placeholder="Password">
+    </div>
 
-</div>
+    <div class="form-group">
+        <label for="country"> Country </label>
+        <input ng-model="vm.company.country" class="form-control" id="country" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+        <label for="photo"> Photo </label>
+        <input type="file" id="photo">
+        <p class="help-block"> PNG, JPG, JPEG, GIF only. </p>
+    </div>
+
+    <div class="form-group">
+        <label for="price"> Price </label>
+        <input ng-model="vm.company.price" class="form-control" id="price" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-default"> Submit </button>
+
+</form>

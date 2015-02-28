@@ -10,22 +10,33 @@ class ApiController extends \BaseController {
     use UserTrait;
 
     /**
+     * Status Code List
+     *
+     *
+     *
+     */
+
+    /**
      * Main Response used in the controllers for 200 and other 200s responses
      *
      * @param array $data
-     * @param int $code
+     * @param string $message
+     * @param int $code = 200
+     * @param array $headers
+     * @param int options
      *
      * @return mixed
      */
-    public function responseSuccess($data = [], $code = 200)
+    public function response($data = [], $message = 'Custom Response Message.', $code = 200, $headers = [], $options = 0)
     {
         $response = [
             'success' => true,
-            'code' => 200,
+            'message' => $message,
+            'code' => $code,
             'data' => $data
         ];
 
-        return Response::json($response, $code);
+        return Response::json($response, $code, $headers, $options);
     }
 
 }

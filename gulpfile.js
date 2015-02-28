@@ -33,22 +33,9 @@
     gulp.task('build', [
         'vendorjs',
         'js',
+        'vendorcss',
         'sass'
     ]);
-
-    /**
-     * Task: vendorjs
-     */
-    gulp.task('vendorjs', function() {
-        gulp.src(paths.vendorjs)
-            .pipe(gulpif(taskConstants.dev, sourcemaps.init()))
-            .pipe(concat(paths.build.files.vendorjs))
-            .pipe(bytediff.start())
-            .pipe(gulpif(taskConstants.prod, uglify()))
-            .pipe(bytediff.stop())
-            .pipe(gulpif(taskConstants.dev, sourcemaps.write()))
-            .pipe(gulp.dest(paths.build.folder));
-    });
 
     /**
      * build js
@@ -66,17 +53,44 @@
     });
 
     /**
-     * Task: SASS
+     * Task: vendorjs
      */
-    gulp.task('sass', function()
-    {
+    gulp.task('vendorjs', function() {
+        gulp.src(paths.vendorjs)
+            .pipe(gulpif(taskConstants.dev, sourcemaps.init()))
+            .pipe(concat(paths.build.files.vendorjs))
+            .pipe(bytediff.start())
+            .pipe(gulpif(taskConstants.prod, uglify()))
+            .pipe(bytediff.stop())
+            .pipe(gulpif(taskConstants.dev, sourcemaps.write()))
+            .pipe(gulp.dest(paths.build.folder));
+    });
+
+    /**
+     * Task: css / sass
+     */
+    gulp.task('sass', function() {
         gulp.src('public/app/styles/**/*.scss')
             .pipe(sourcemaps.init())
             .pipe(sass()).on('error', gutil.log)
-            .pipe(concat('main.css'))
+            .pipe(concat('app.css'))
             .pipe(sourcemaps.write())
-            .pipe(gulp.dest('public/app/styles'))
+            .pipe(gulp.dest('public/app/build'))
             .pipe(notify('CSS compiled!'));
+    });
+
+    /**
+     * Task: vendorcss
+     */
+    gulp.task('vendorcss', function() {
+        gulp.src(paths.vendorcss)
+            .pipe(gulpif(taskConstants.dev, sourcemaps.init()))
+            .pipe(concat(paths.build.files.vendorcss))
+            .pipe(bytediff.start())
+            .pipe(gulpif(taskConstants.prod, uglify()))
+            .pipe(bytediff.stop())
+            .pipe(gulpif(taskConstants.dev, sourcemaps.write()))
+            .pipe(gulp.dest(paths.build.folder));
     });
 
     /**
@@ -117,6 +131,8 @@
     /**
      * Default Task
      */
-    gulp.task('default', ['watch']);
+    gulp.task('default', [
+        'watch'
+    ]);
 
 })();

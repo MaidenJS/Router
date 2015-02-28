@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder {
             'password' => 'yichen'
         ]);
 
-        foreach(range(1, 100) as $index)
+        foreach(range(1, 49) as $index)
         {
             User::create([
                 'email' => $faker->email,

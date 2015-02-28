@@ -11,7 +11,7 @@ class ProjectsTableSeeder extends Seeder {
 		foreach(range(1, 100) as $index)
 		{
 			Project::create([
-				'company_id' => rand(1, 100),
+				'company_id' => rand(1, 50),
 				'name' => $faker->name,
 				'description' => $faker->paragraph(5),
 				'view_count' => $faker->randomDigitNotNull,

@@ -144,3 +144,7 @@ tags
 1 web
 2 mobile
 3 desktop
+
+
+$q and defered promises
+- what really is a promise?

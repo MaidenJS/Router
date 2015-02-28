@@ -1,11 +1,11 @@
 User
 ----------------
-/users/register
+POST /users/register
 
-/users/login
+POST /users/login
 
-/users/logout
+POST /users/logout
 
-/users/get-auth
+GET /users/get-auth
 
 

@@ -8,10 +8,10 @@ class CompaniesTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(range(1, 100) as $index)
+		foreach(range(1, 50) as $index)
 		{
 			Company::create([
-				'user_id' => rand(1, 100),
+				'user_id' => rand(1, 50),
 				'name' => $faker->name,
 				'email' => $faker->email,
 				'address' => $faker->address,

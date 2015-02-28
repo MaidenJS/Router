@@ -31,10 +31,10 @@
     "public/bower_components/angular/angular.js",
     "public/bower_components/angular-ui-router/release/angular-ui-router.js",
     "public/bower_components/restangular/dist/restangular.js",
-    "public/bower_components/angular-utils-pagination/dirPagination.js"
+    "public/bower_components/angular-animate/angular-animate.js"
   ],
   "vendorcss": [
-    "public/bower_components/bootstrap/dist/css/bootstrap.css"
+    "public/app/styles/angular/angular-animations.css"
   ],
   "testing": [
     "public/bower_components/angular/angular.js",

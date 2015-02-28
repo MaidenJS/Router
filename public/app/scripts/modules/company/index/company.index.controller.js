@@ -3,10 +3,24 @@
     'use strict';
 
     angular
-        .module('app')
-        .controller('CompanyController', companyController);
+        .module('wp.company')
+        .controller('CompanyIndexController', CompanyIndexController);
 
-    function companyController($scope) {
+    function CompanyIndexController(companyService) {
+
+        var vm = this;
+
+        activate();
+
+        function activate()
+        {
+            vm.companies = companyService.getAll().$object;
+        }
+
+        vm.deleteCompany = function(companyId)
+        {
+            console.log(companyId);
+        }
 
     }
 

@@ -27,7 +27,11 @@ class CompaniesController extends ApiController {
 	{
 		$companies = $this->companyRepository->getAll();
 
-		return $this->responseSuccess($companies);
+		return $this->response(
+            $data = $companies,
+            $message = 'List of all companies in the db.',
+            $code = 200
+        );
 	}
 
 	/**
@@ -41,7 +45,11 @@ class CompaniesController extends ApiController {
 	{
 		$company = $this->companyRepository->getById($id);
 
-		return $this->responseSuccess($company);
+        return $this->response(
+            $data = $company,
+            $message = 'Lists the specified company by id in the db.',
+            $code = 200
+        );
 	}
 
 	/**
@@ -56,7 +64,11 @@ class CompaniesController extends ApiController {
 
 		$company = $this->companyRepository->create($input);
 
-		return $this->responseSuccess($company);
+        return $this->response(
+            $data = $company,
+            $message = 'Company created.',
+            $code = 200
+        );
 	}
 
 	/**
@@ -70,7 +82,11 @@ class CompaniesController extends ApiController {
 	{
 		$company = $this->companyRepository->update($id, []);
 
-		return $this->responseSuccess($company);
+		return $this->response(
+            $data = $company,
+            $message = 'Company updated.',
+            $code = 201
+        );
 	}
 
 	/**
@@ -84,7 +100,11 @@ class CompaniesController extends ApiController {
 	{
 		$company = $this->companyRepository->delete($id);
 
-		return $this->responseSuccess($company);
+        return $this->response(
+            $data = $company,
+            $message = 'Company deleted.',
+            $code = 200
+        );
 	}
 
 }

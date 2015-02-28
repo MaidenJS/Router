@@ -3,28 +3,37 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('wp.company')
         .config(config);
 
     function config($stateProvider) {
 
-        var local_url = 'app/scripts/modules/company/views/';
+        var directory = 'app/scripts/modules/company/';
 
         $stateProvider
             .state('companies', {
                 url : '/companies',
-                templateUrl : local_url + 'company.index.html',
-                controller: 'CompanyController'
+                templateUrl : directory + 'index/company.index.html',
+                controller: 'CompanyIndexController',
+                controllerAs: 'vm'
+            })
+            .state('companyCreate', {
+                url : '/companies/create',
+                templateUrl : directory + 'create/company.create.html',
+                controller: 'CompanyCreateController',
+                controllerAs: 'vm'
             })
             .state('companyShow', {
                 url : '/companies/:companyId',
-                templateUrl : local_url + 'company.show.html',
-                controller: 'CompanyController'
+                templateUrl : directory + 'show/company.show.html',
+                controller: 'CompanyShowController',
+                controllerAs: 'vm'
             })
             .state('companyEdit', {
                 url : '/companies/:companyId/edit',
-                templateUrl : local_url + 'company.edit.html',
-                controller: 'CompanyController'
+                templateUrl : directory + 'edit/company.edit.html',
+                controller: 'CompanyEditController',
+                controllerAs: 'vm'
             });
 
     }

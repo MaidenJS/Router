@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 
     <head>
         <title> Wiseproject </title>
@@ -10,31 +10,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="wp is awesome">
         <meta name="author" content="yichen">
+        <link href="app/images/favicon.ico" rel="shortcut icon">
 
         <!-- CSS -->
-        <link rel="shortcut icon" href="app/images/favicon.ico">
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="app/styles/main.css" rel="stylesheet" type="text/css"/>
+
+        <!-- BUILD CSS -->
+        <link href="app/build/vendor.css" rel="stylesheet" type="text/css">
+        <link href="app/build/app.css" rel="stylesheet" type="text/css"/>
     </head>
 
-    <body ng-app="app">
+    <body>
 
         <!------------ Navbar ------------>
         <div ng-include="'app/scripts/modules/layout/navbar/views/navbar.html'"></div>
 
         <!------------ Main ------------>
-        <div class="container page-wrap">
-            <div ui-view></div>
+        <div class="container">
+            <div class="span12 ui-view-container">
+                <div class="well" ui-view></div>
+            </div>
         </div>
 
         <!------------ Footer ------------>
-        <div ng-include="'app/scripts/modules/layout/footer/views/footer.html'"></div>
+        <!--<div ng-include="'app/scripts/modules/layout/footer/views/footer.html'"></div>-->
 
         <!-- CSRF Tokens -->
-        <div> <?php echo Session::token(); ?> </div>
-        <div> <?php echo csrf_token(); ?> </div>
+        <div> <?php //echo Session::token(); ?> </div>
+        <div> <?php //echo csrf_token(); ?> </div>
 
-        <!-- JS -->
+        <!-- BUILD JS -->
         <script src="app/build/vendor.js"></script>
         <script src="app/build/app.js"></script>
 
