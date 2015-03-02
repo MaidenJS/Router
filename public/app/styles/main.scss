@@ -7,6 +7,32 @@ body
 {
   text-align: center;
 }
+
+img.three {
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+}
+
+img.tie {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.main-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+footer {
+  background: #333;
+  color: #eee;
+  font-size: 11px;
+  padding: 20px;
+}
 /*
 .page-wrap {
   min-height: 100%;
