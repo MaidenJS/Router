@@ -10,8 +10,11 @@
     "require-dev": {
         "way/generators": "~2.0",
         "phpunit/phpunit": "~4.4",
+        "phpspec/phpspec": "~2.1",
         "fzaninotto/faker": "~1.5",
-        "mockery/mockery": "0.9.*"
+        "mockery/mockery": "0.9.*",
+        "league/fractal": "0.10.0",
+        "laracasts/testdummy": "~1.0"
     },
 	"autoload": {
 		"classmap": [

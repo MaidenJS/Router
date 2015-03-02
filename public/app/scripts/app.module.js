@@ -9,8 +9,8 @@
 
             // external dependencies
             'ui.router',
-            'restangular',
-            'ngAnimate'
+            'restangular'
+            //'ngAnimate'
         ]);
 
 })();

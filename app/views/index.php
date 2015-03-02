@@ -26,11 +26,13 @@
         <div ng-include="'app/scripts/modules/layout/navbar/views/navbar.html'"></div>
 
         <!------------ Main ------------>
-        <div class="container">
+<!--        <div class="container">
             <div class="span12 ui-view-container">
                 <div class="well" ui-view></div>
             </div>
-        </div>
+        </div>-->
+
+        <div ui-view></div>
 
         <!------------ Footer ------------>
         <!--<div ng-include="'app/scripts/modules/layout/footer/views/footer.html'"></div>-->
