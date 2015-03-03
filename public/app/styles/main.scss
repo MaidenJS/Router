@@ -3,6 +3,10 @@ body
   margin-top: 50px;
 }
 
+.img {
+  height: 250px;
+  width: 250px;
+}
 .text-center
 {
   text-align: center;
@@ -30,9 +34,78 @@ img.tie {
 footer {
   background: #333;
   color: #eee;
-  font-size: 11px;
+  font-size: 20px;
   padding: 20px;
 }
+
+.bar {
+  background-color: #ff5039;
+  color: #ff0000;
+  height: 50px;
+  margin-top: -50px;
+}
+
+img.arrowdown {
+  height: 50px;
+  width: 50px;
+}
+
+.jumbotron {
+  height: 500px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.background-city
+{
+  background: url("../../app/assets/images/city.png") no-repeat;
+}
+
+.background-purple
+{
+  background-color: #BCA7C5;
+}
+
+.background-blue
+{
+  background-color: #2980B9;
+}
+
+.purple
+{
+  color: #BCA7C5;
+}
+
+.white-grey
+{
+  color: #EBE9EC;
+}
+
+.blue
+{
+  color: #2980B9;
+}
+
+h3{
+  color: #000000;
+}
+
+p{
+  color: black;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+
+
+
+
+
 /*
 .page-wrap {
   min-height: 100%;
