@@ -1,6 +1,4 @@
-<?php namespace api;
-
-use EliteTestingFramework\tests\EliteTestingFramework;
+<?php
 
 class CompanyRoutesTest extends EliteTestingFramework {
 
@@ -11,7 +9,7 @@ class CompanyRoutesTest extends EliteTestingFramework {
      */
     public function testGetAllCompanies()
     {
-
+        $this->apiCall('GET', 'api/v1/companies');
     }
 
     /**
@@ -21,7 +19,7 @@ class CompanyRoutesTest extends EliteTestingFramework {
      */
     public function testGetACompanyById()
     {
-
+        $this->apiCall('GET', 'api/v1/companies/1');
     }
 
     /**
