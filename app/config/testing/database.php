@@ -17,7 +17,7 @@ return [
             'host'      => 'localhost',
             'database'  => 'payquad',
             'username'  => 'root',
-            'password'  => '',
+            'password'  => 'root',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

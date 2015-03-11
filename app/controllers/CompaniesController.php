@@ -60,7 +60,17 @@ class CompaniesController extends ApiController {
 	 */
 	public function store()
 	{
-		$input = [];
+		$input = Input::only(
+            'name',
+            'email',
+            'address',
+            'phone',
+            'postal_code',
+            'country',
+            'photo',
+            'price'
+        );
+        $input['user_id'] = Auth::user()->id;
 
 		$company = $this->companyRepository->create($input);
 

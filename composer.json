@@ -23,7 +23,9 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+            "app/tests/EliteTestingFramework/EliteTestingFramework.php",
+            "app/tests/EliteTestingFramework/TestingFrameworkInterface.php"
 		],
         "files": [
             "app/Acme/helpers.php"

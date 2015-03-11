@@ -44,7 +44,11 @@ class UsersController extends ApiController {
             'Acme\Modules\User\Commands\Register\RegisterUserSanitizer'
         ]);
 
-        return $this->responseSuccess($command);
+        return $this->response(
+            $data = $command,
+            $message = 'user is now registered',
+            $code = 200
+        );
     }
 
     /**
@@ -64,7 +68,11 @@ class UsersController extends ApiController {
 
         $user = $this->userRepository->login($credentials);
 
-        return $this->responseSuccess($user);
+        return $this->response(
+            $data = $user,
+            $message = 'user is now logged in',
+            $code = 200
+        );
     }
 
     /**
@@ -74,16 +82,6 @@ class UsersController extends ApiController {
     public function logout()
     {
         return $this->responseSuccess($this->userRepository->logout());
-    }
-
-    /**
-     * Returns the currently authenticated user and their information
-     *
-     * @return mixed
-     */
-    public function getAuthUser()
-    {
-        return $this->responseSuccess($this->userRepository->getAuthUser());
     }
 
 }

@@ -1,4 +1,4 @@
-<?php namespace EliteTestingFramework\tests;
+<?php
 
 /**
  * Laravel specific testing framework for functional/db tests
@@ -8,6 +8,15 @@
  *	- Mockery 0.9.*
  */
 class EliteTestingFramework extends TestCase implements TestingFrameworkInterface {
+
+    /**
+     *
+     */
+    public function testInitialize()
+    {
+        echo 'Elite Testing Framework Initialized.';
+        $this->assertTrue(true);
+    }
 
 	/**
 	 * Used specifically by Mockery library
@@ -40,26 +49,18 @@ class EliteTestingFramework extends TestCase implements TestingFrameworkInterfac
 
 	/**
 	 * Used specifically by Mockery library
-	 *
+     *
+     * Example call:
+     * $this->seeInDb('users', [
+     *      'first_name' => 'david',
+     *      'last_name' => 'cooper'
+     * ]);
+     *
 	 * @param $table
 	 * @param array $fields
 	 */
 	public function seeInDb($table, array $fields = [])
 	{
-		/*
-		Example call:
-		$this->seeInDb('users', [
-			'first_name' => 'david',
-			'last_name' => 'cooper'
-		]);
-		*/
-
-		// input
-		// $table = 'users';
-		// $fields = [
-		//	'first_name' => 'david',
-		//	'last_name' => 'cooper'
-		// ];
 		// Setting up the SQL and Where clause
 		$query = 'SELECT * FROM ' . $table . ' WHERE ';
 		foreach ($fields as $field => $value)
