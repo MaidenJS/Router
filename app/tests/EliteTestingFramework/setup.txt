@@ -1,4 +1,0 @@
-copy pasterino into the composer.json file
-
-"app/tests/EliteTestingFramework/EliteTestingFramework.php",
-"app/tests/EliteTestingFramework/TestingFrameworkInterface.php"

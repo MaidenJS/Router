@@ -1,61 +1,68 @@
-# WiseProject [![Build Status](https://travis-ci.org/yichenzhu1337/my_esports_world.svg?branch=master)](https://travis-ci.org/yichenzhu1337/my_esports_world) #
-Wiseproject provides a platform for companies to find vendors for sourcing contracts.
+Symfony Standard Edition
+========================
 
-## Repository Information & Guide ##
+Welcome to the Symfony Standard Edition - a fully-functional Symfony
+application that you can use as the skeleton for your new applications.
 
-### API Documentation ###
-- API docs: https://speca.io/yichenzhu1337/wiseproject-api/
+For details on how to download and get started with Symfony, see the
+[Installation][1] chapter of the Symfony Documentation.
 
-### Server Details ###
-- Domain Name: http://www.wiseproject.ca/
-- IP Address: 104.131.109.224
-- Username: forge
-- Sudo Password: 2mm6ZVfJWpsfInNd2L27
-- Database Name: forge
-- Database Username: forge
-- Database Password: OWuIFrEalK0jGAJ0wE5F
+What's inside?
+--------------
 
-### Database Configuration ###
-1. create a file called ".env.php"
-2. copy and paste:
-```
-<?php
-    return [
-        'DB_HOST' => 'localhost',
-        'DB_NAME' => 'wiseproject',
-        'DB_USERNAME' => 'root',
-        'DB_PASSWORD' => 'root'
-    ];
-```
+The Symfony Standard Edition is configured with the following defaults:
 
-### Backend Setup and Update ###
-1. Install Laravel: "composer install"
-2. update Laravel: "composer update"
-3. Migrate your database: "php artisan migrate"
-4. Seed your database: "php artisan db:seed"
-5. Autoload All files: "composer dump-autoload -o"
+  * An AppBundle you can use to start coding;
 
-### Frontend Setup and Update ###
-1. Install node_modules: "npm install" in root folder
-2. Install bower_components: "cd public", "bower install", "bower list"
-3. Update bower_components: "cd public", "bower update", "bower list"
+  * Twig as the only configured template engine;
 
-### Running Gulp ###
-1. "gulp build --dev" or gulp build --prod"
-2. "gulp watch --dev"
+  * Doctrine ORM/DBAL;
 
-### Running the application ###
-1. type "php artisan serve" on the command line to start the server
-2. host is at: "localhost:8000"
-3. run gulp and watcher: "gulp watch --dev"
-4. access api via the prefix: "localhost:8000/api/v1/*route-name*"
+  * Swiftmailer;
 
-### Testing with PHPUnit ###
-1. Windows Aliasing: (at)DOSKEY phpunit=vendor\bin\phpunit
-2. Linux Aliasing: alias phpunit=vendor\bin\phpunit
-3. type "phpunit" on the command line
+  * Annotations enabled for everything.
 
-### Testing with Codeception ###
-1. Windows Aliasing: (at)DOSKEY cc=vendor\bin\codecept
-2. Linux Aliasing: alias cc=vendor\bin\codecept
-3. "cc run [suite]"
+It comes pre-configured with the following bundles:
+
+  * **FrameworkBundle** - The core Symfony framework bundle
+
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+
+  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
+    component
+
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
+    sending emails
+
+  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
+    capabilities
+
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Standard Edition are
+released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  https://symfony.com/doc/3.0/book/installation.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/3.0/book/doctrine.html
+[8]:  https://symfony.com/doc/3.0/book/templating.html
+[9]:  https://symfony.com/doc/3.0/book/security.html
+[10]: https://symfony.com/doc/3.0/cookbook/email.html
+[11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
+[13]: https://symfony.com/doc/3.0/bundles/SensioGeneratorBundle/index.html
